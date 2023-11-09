@@ -1,0 +1,23 @@
+{
+  "name": "mirroros",
+  "version": "0.1.0",
+  "description": "Simple electron application to display information on a smart mirror",
+  "main": "main.js",
+  "scripts": {
+	"start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theGuardianCode/MirrorOS.git"
+  },
+  "author": "theGuardianCode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theGuardianCode/MirrorOS/issues"
+  },
+  "homepage": "https://github.com/theGuardianCode/MirrorOS#readme",
+  "dependencies": {
+    "electron": "^27.0.4"
+  }
+}
