@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron')
+const path = require('node:path')
 
 const createWindow = () => {
 	const win = new BrowserWindow({
@@ -6,8 +7,8 @@ const createWindow = () => {
 		height: 600,
 	})
 
-	win.loadFile('index.html')
-	win.removeMenu()
+	win.loadFile('./src/index.html')
+	// win.removeMenu()
 }
 
 app.whenReady().then(() => {
