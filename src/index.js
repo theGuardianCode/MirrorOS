@@ -12,7 +12,7 @@ const updateTime = () => {
 const updateWeather = () => {
 	let element = document.getElementById('weather')
 
-	const url = `https://api.openweathermap.org/data/2.5/weather?q=Cairns&appid=4bbd8c76efb20600772acc0c381b9dc8&units=metric`
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=Cairns&appid=&units=metric`
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
