@@ -4,7 +4,7 @@ const months = ["Jan", "Feb", "Mar", "May", "June", "July", "Aug", "Sep", "Oct",
 const updateTime = () => {
 	let element = document.getElementById('datetime')
 	const date = new Date()
-	const text = `<div class="time"><h1>${date.toLocaleTimeString()}</h1></div><div class="date"><h3>${days[date.getDay() - 1]}, ${date.getDate()} ${months[date.getMonth() - 1]}</h3></div>`
+	const text = `<div class="time"><h1>${date.toLocaleTimeString()}</h1></div><div class="date bottom" ><h3>${days[date.getDay() - 1]}, ${date.getDate()} ${months[date.getMonth() - 1]}</h3></div>`
 
 	element.innerHTML = text
 }
@@ -18,8 +18,9 @@ const updateWeather = () => {
 		.then((data) => {
 			const type = data["weather"][0]["main"]
 			const temp = data["main"]["temp"]
+			const city = data["name"]
 				
-			const text = `<h1>${temp}&#176C</h1>`
+			const text = `<div class="weather-main"><img src="../img/${type.toLowerCase()}.png" alt="${type}"><h1>${temp}&#176C</h1></div><div class="weather-city"><h3>${city}</h3></div>`
 			element.innerHTML = text
 		})
 		.catch((error) => {
