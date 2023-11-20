@@ -1,5 +1,6 @@
 const days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"]
 const months = ["Jan", "Feb", "Mar", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
+const apikey = '4bbd8c76efb20600772acc0c381b9dc8'
 
 const updateTime = () => {
 	let element = document.getElementById('datetime')
@@ -12,7 +13,7 @@ const updateTime = () => {
 const updateWeather = () => {
 	let element = document.getElementById('weather')
 
-	const url = `https://api.openweathermap.org/data/2.5/weather?q=Cairns&appid=&units=metric`
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=Cairns&appid=${apikey}&units=metric`
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
